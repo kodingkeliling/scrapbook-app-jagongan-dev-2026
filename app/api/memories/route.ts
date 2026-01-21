@@ -21,8 +21,8 @@ export async function POST(request: Request) {
             data: {
                 caption,
                 imageUrl,
-                userName,
-                userAvatar,
+                userName: userName || null,
+                userAvatar: userAvatar || null,
             },
         });
 

@@ -56,8 +56,8 @@ export default function MemoryForm({ onSuccess }: MemoryFormProps) {
             await axios.post("/api/memories", {
                 caption: data.caption,
                 imageUrl: driveResult.imageUrl,
-                userName: user.name,
-                userAvatar: user.picture,
+                userName: user?.name || null,
+                userAvatar: user?.picture || null,
             });
 
             toast.success("Memory encoded successfully!");
